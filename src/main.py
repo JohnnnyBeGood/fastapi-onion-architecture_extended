@@ -6,7 +6,7 @@ from db.db import init_db
 from api.routers import all_routers
 
 
-app = FastAPI(title="Упрощенный аналог Jira/Asana v 2.0")
+app = FastAPI(title="Упрощенный аналог Jira/Asana с дополнением")
 
 
 for router in all_routers:

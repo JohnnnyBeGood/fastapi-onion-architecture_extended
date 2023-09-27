@@ -1,12 +1,12 @@
 import uvicorn
+import asyncio
 from fastapi import FastAPI
+from db.db import init_db
 
 from api.routers import all_routers
 
 
-app = FastAPI(
-    title="Упрощенный аналог Jira/Asana"
-)
+app = FastAPI(title="Упрощенный аналог Jira/Asana v 2.0")
 
 
 for router in all_routers:
@@ -14,4 +14,5 @@ for router in all_routers:
 
 
 if __name__ == "__main__":
+    asyncio.run(init_db())
     uvicorn.run(app="main:app", reload=True)

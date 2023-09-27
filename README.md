@@ -26,6 +26,26 @@
 1. Создать виртуальное окружение и установить зависимости
 2. Вызвать в терминале `python3 src/main.py`
 
+либо если вы используете VS Code, вот *launch.json*
+
+``` json
+"version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: FastAPI",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "jinja": true,
+            "justMyCode": true
+        }
+    ]
+```
+
+самое главное запускать/нажимать  **F5** когда открыт файл ***main.py*** и в редакторе
+этот файл активен
+
 ~~### Настройка Alembic для асинхронного драйвера~~
 
 по данной инструкции создать БД у меня не получилось, поэтому я в коде сделал,
